@@ -1,34 +1,105 @@
-# File: context_processor/validator.py
+from datetime import datetime
+from typing import List, Dict
+from context_processor.schemas import (
+    CandidateContextObject,
+    ValidationResult,
+    DomainEnum,
+    LevelEnum,
+    BloomEnum,
+)
 
-from typing import Dict, Any, List
-from context_processor.schemas import CandidateContextObject
+
+BLOOM_LEVEL_RULES: Dict[str, List[str]] = {
+    "L1": ["Remember", "Understand", "Apply"],
+    "L2": ["Remember", "Understand", "Apply", "Analyse"],
+    "L3": ["Remember", "Understand", "Apply", "Analyse", "Evaluate"],
+    "L4": ["Remember", "Understand", "Apply", "Analyse", "Evaluate", "Create"],
+}
+
+VALID_DOMAINS = [e.value for e in DomainEnum]
+VALID_LEVELS  = [e.value for e in LevelEnum]
+VALID_BLOOMS  = [e.value for e in BloomEnum]
 
 
-def validate_context(context: CandidateContextObject) -> Dict[str, Any]:
-    """
-    Executes sequential validation rules against a CandidateContextObject.
-    """
-    errors: List[str] = []
-
-    # Check 1: Candidate Eligibility Flag
-    if not context.eligibility_confirmed:
-        errors.append("Candidate eligibility is not confirmed.")
-
-    # Check 2: Criteria Focus List
-    if not context.criteria_focus:
-        errors.append("Criteria focus list cannot be empty.")
-
-    # Check 3: Candidate ID String Integrity
-    if not context.candidate_id or not context.candidate_id.strip():
-        errors.append("Candidate ID cannot be empty or whitespace.")
-
-    # Overall validation flag
-    is_valid = len(errors) == 0
-
+def parse_dq_output(dq_json: dict) -> dict:
     return {
-        "is_valid": is_valid,
-        "errors": errors,
-        "candidate_id": context.candidate_id,
-        "domain": context.domain,
-        "level": context.level
+        "candidate_id": dq_json.get("candidate_id", ""),
+        "certification_level": dq_json.get(
+            "certification_level",
+            dq_json.get("level", "")
+        ),
+        "domain":       dq_json.get("domain", ""),
+        "bloom_target": dq_json.get("bloom_target", ""),
+        "background":   dq_json.get("background", ""),
+        "eligibility_confirmed": dq_json.get("eligibility_confirmed", False),
+        "timestamp":    dq_json.get(
+            "timestamp",
+            datetime.now().isoformat()
+        ),
+        "source_assessment_id": dq_json.get("source_assessment_id", ""),
     }
+
+
+def validate_context(raw: dict) -> ValidationResult:
+    errors:   List[str] = []
+    warnings: List[str] = []
+
+    required_fields = [
+        "candidate_id", "domain", "certification_level",
+        "bloom_target", "background", "eligibility_confirmed",
+        "timestamp", "source_assessment_id",
+    ]
+    for field in required_fields:
+        if field not in raw or raw[field] is None:
+            errors.append(f"Missing required field: '{field}'")
+
+    if errors:
+        return ValidationResult(is_valid=False, errors=errors, warnings=warnings)
+
+    if raw["domain"] not in VALID_DOMAINS:
+        errors.append(
+            f"Invalid domain '{raw['domain']}'. "
+            f"Must be one of: {', '.join(VALID_DOMAINS)}"
+        )
+
+    if raw["certification_level"] not in VALID_LEVELS:
+        errors.append(
+            f"Invalid certification_level '{raw['certification_level']}'. "
+            f"Must be one of: {', '.join(VALID_LEVELS)}"
+        )
+
+    level = raw.get("certification_level")
+    bloom = raw.get("bloom_target")
+    if level in BLOOM_LEVEL_RULES:
+        if bloom not in BLOOM_LEVEL_RULES[level]:
+            errors.append(
+                f"bloom_target '{bloom}' is not allowed at {level}. "
+                f"Allowed values: {BLOOM_LEVEL_RULES[level]}"
+            )
+
+    background = raw.get("background", "")
+    if len(background) > 500:
+        errors.append(
+            f"background exceeds 500 characters (got {len(background)})."
+        )
+    elif len(background) < 20:
+        warnings.append(
+            f"background is very short ({len(background)} chars). "
+            "Scenario matching may be less accurate."
+        )
+
+    if not raw.get("eligibility_confirmed", False):
+        errors.append(
+            "Candidate not eligible — eligibility_confirmed is False."
+        )
+
+    is_valid = len(errors) == 0
+    return ValidationResult(is_valid=is_valid, errors=errors, warnings=warnings)
+
+
+def build_candidate_context(dq_json: dict) -> CandidateContextObject:
+    mapped = parse_dq_output(dq_json)
+    result = validate_context(mapped)
+    if not result.is_valid:
+        raise ValueError(f"Validation failed: {result.errors}")
+    return CandidateContextObject(**mapped)

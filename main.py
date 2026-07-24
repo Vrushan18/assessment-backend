@@ -1,44 +1,59 @@
-# File: main.py
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 
-from fastapi import FastAPI, HTTPException, status
 from context_processor.schemas import CandidateContextObject
-from context_processor.validator import validate_context
-from context_processor.privacy import anonymize_context
+from context_processor.validator import parse_dq_output, validate_context
 
 app = FastAPI(
-    title="Assessment Backend - Context Processing API",
-    description="Member 1 API for Candidate Validation and Data Privacy",
-    version="1.0.0",
+    title="PECS Question Engine API",
+    description="Context validation and assessment package generation for PECS certification.",
+    version="0.1.0"
 )
 
 
-@app.get("/")
-def health_check():
-    return {"status": "online", "module": "Context Processor (Member 1)"}
+@app.exception_handler(ValueError)
+async def value_error_handler(request: Request, exc: ValueError):
+    return JSONResponse(
+        status_code=400,
+        content={"error": "validation_error", "detail": str(exc)}
+    )
+
+@app.exception_handler(Exception)
+async def general_error_handler(request: Request, exc: Exception):
+    return JSONResponse(
+        status_code=500,
+        content={"error": "internal_error", "detail": "Contact engineering team"}
+    )
 
 
-@app.post("/validate-context", status_code=status.HTTP_200_OK)
-def process_candidate_context(context: CandidateContextObject):
+@app.get("/health")
+def health():
+    return {"status": "ok", "version": "0.1.0"}
+
+
+@app.post("/validate-context")
+async def validate_context_endpoint(request: Request):
     """
-    Receives candidate context payload, performs eligibility and validation checks,
-    and returns sanitized data if valid.
+    Step 1 of the pipeline.
+    Receives raw DQ Assessment JSON.
+    Returns CandidateContextObject + ValidationResult.
+    Always returns HTTP 200 — is_valid field signals pass/fail.
     """
-    validation_result = validate_context(context)
+    raw_body = await request.json()
 
-    if not validation_result["is_valid"]:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail={
-                "message": "Candidate context validation failed.",
-                "errors": validation_result["errors"],
-            },
-        )
+    mapped = parse_dq_output(raw_body)
+    result = validate_context(mapped)
 
-    # If valid, apply privacy masking
-    safe_context = anonymize_context(context)
-
-    return {
-        "status": "success",
-        "message": "Candidate context successfully validated.",
-        "validated_data": safe_context,
+    response = {
+        "validation": result.model_dump()
     }
+
+    if result.is_valid:
+        try:
+            ctx = CandidateContextObject(**mapped)
+            response["candidate_context"] = ctx.model_dump(mode="json")
+        except Exception as e:
+            response["validation"]["is_valid"] = False
+            response["validation"]["errors"].append(f"Schema error: {str(e)}")
+
+    return response
