@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 
 from context_processor.schemas import CandidateContextObject
 from context_processor.validator import parse_dq_output, validate_context
@@ -36,6 +36,12 @@ async def general_error_handler(request: Request, exc: Exception):
     )
 
 
+# Root URL redirects to Swagger documentation
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
+
+
 @app.get("/health")
 def health():
     return {
@@ -56,7 +62,6 @@ async def validate_context_endpoint(request: Request):
     raw_body = await request.json()
 
     mapped = parse_dq_output(raw_body)
-
     result = validate_context(mapped)
 
     response = {
@@ -67,7 +72,6 @@ async def validate_context_endpoint(request: Request):
         try:
             ctx = CandidateContextObject(**mapped)
             response["candidate_context"] = ctx.model_dump(mode="json")
-
         except Exception as e:
             response["validation"]["is_valid"] = False
             response["validation"]["errors"].append(
@@ -77,15 +81,16 @@ async def validate_context_endpoint(request: Request):
     return response
 
 
-# ----------------------------
-# MEMBER 2 - CONTEXT MAPPING
-# ----------------------------
-
 @app.post("/mapping/map")
 async def map_context(context: CandidateContextObject):
+    """
+    Step 2 of the pipeline.
+    Receives a validated CandidateContextObject.
+    Maps the candidate context to a PECS assessment pathway.
+    Returns MappedContext.
+    """
 
     mapper = ContextMapper()
-
     mapped_context = mapper.map(context)
 
-    return mapped_context.model_dump()
+    return mapped_context.model_dump(mode="json")
