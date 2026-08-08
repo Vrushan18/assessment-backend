@@ -4,6 +4,9 @@ from fastapi.responses import JSONResponse
 from context_processor.schemas import CandidateContextObject
 from context_processor.validator import parse_dq_output, validate_context
 
+from mapping_engine.mapper import ContextMapper
+
+
 app = FastAPI(
     title="PECS Question Engine API",
     description="Context validation and assessment package generation for PECS certification.",
@@ -15,20 +18,30 @@ app = FastAPI(
 async def value_error_handler(request: Request, exc: ValueError):
     return JSONResponse(
         status_code=400,
-        content={"error": "validation_error", "detail": str(exc)}
+        content={
+            "error": "validation_error",
+            "detail": str(exc)
+        }
     )
+
 
 @app.exception_handler(Exception)
 async def general_error_handler(request: Request, exc: Exception):
     return JSONResponse(
         status_code=500,
-        content={"error": "internal_error", "detail": "Contact engineering team"}
+        content={
+            "error": "internal_error",
+            "detail": "Contact engineering team"
+        }
     )
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "version": "0.1.0"}
+    return {
+        "status": "ok",
+        "version": "0.1.0"
+    }
 
 
 @app.post("/validate-context")
@@ -39,9 +52,11 @@ async def validate_context_endpoint(request: Request):
     Returns CandidateContextObject + ValidationResult.
     Always returns HTTP 200 — is_valid field signals pass/fail.
     """
+
     raw_body = await request.json()
 
     mapped = parse_dq_output(raw_body)
+
     result = validate_context(mapped)
 
     response = {
@@ -52,8 +67,25 @@ async def validate_context_endpoint(request: Request):
         try:
             ctx = CandidateContextObject(**mapped)
             response["candidate_context"] = ctx.model_dump(mode="json")
+
         except Exception as e:
             response["validation"]["is_valid"] = False
-            response["validation"]["errors"].append(f"Schema error: {str(e)}")
+            response["validation"]["errors"].append(
+                f"Schema error: {str(e)}"
+            )
 
     return response
+
+
+# ----------------------------
+# MEMBER 2 - CONTEXT MAPPING
+# ----------------------------
+
+@app.post("/mapping/map")
+async def map_context(context: CandidateContextObject):
+
+    mapper = ContextMapper()
+
+    mapped_context = mapper.map(context)
+
+    return mapped_context.model_dump()
