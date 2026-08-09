@@ -1,0 +1,50 @@
+[
+    {
+        "scenario_id": "SC001",
+        "title": "Engineering Design Challenge",
+        "description": "Design and evaluate an engineering solution for a practical problem.",
+        "domain": "Engineering",
+        "difficulty": "Medium",
+        "criteria": [
+            "C1",
+            "C2",
+            "C3"
+        ]
+    },
+    {
+        "scenario_id": "SC002",
+        "title": "Engineering Risk Analysis",
+        "description": "Analyse an engineering project and identify technical and operational risks.",
+        "domain": "Engineering",
+        "difficulty": "Hard",
+        "criteria": [
+            "C2",
+            "C4",
+            "C5"
+        ]
+    },
+    {
+        "scenario_id": "SC003",
+        "title": "Science Investigation",
+        "description": "Investigate a scientific problem and evaluate possible conclusions.",
+        "domain": "Science",
+        "difficulty": "Medium",
+        "criteria": [
+            "C1",
+            "C3",
+            "C6"
+        ]
+    },
+    {
+        "scenario_id": "SC004",
+        "title": "Commerce Strategy",
+        "description": "Develop a strategy for solving a business and commerce problem.",
+        "domain": "Commerce",
+        "difficulty": "Hard",
+        "criteria": [
+            "C2",
+            "C4",
+            "C6"
+        ]
+    }
+]
