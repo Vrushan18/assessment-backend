@@ -73,7 +73,7 @@
   },
   {
     "question_id": "Q005",
-    "question_text": "Which factor is important when evaluating the long-term reliability of an engineering solution?",
+    "question_text": "Which governance decision is most important when approving an engineering solution whose long-term reliability evidence is limited?",
     "question_type": "MCQ",
     "competency_criterion": "C5",
     "bloom_level": "Analyse",
@@ -82,10 +82,10 @@
     "durability_flag": true,
     "governance_flag": true,
     "options": [
-      "Reliability evidence",
-      "Colour of the equipment",
-      "Office layout",
-      "Personal preference"
+      "Require documented reliability evidence and define who is accountable for monitoring failures",
+      "Approve it because the initial test passed",
+      "Ignore the evidence gap",
+      "Remove reliability requirements"
     ],
     "correct_answer_index": 0
   },
@@ -181,7 +181,7 @@
   },
   {
     "question_id": "Q011",
-    "question_text": "Which source of information is most useful when identifying possible failure modes in an engineering system?",
+    "question_text": "A reliability engineer finds repeated failure data that was not included in a design review. What should the engineer do?",
     "question_type": "MCQ",
     "competency_criterion": "C5",
     "bloom_level": "Analyse",
@@ -190,10 +190,10 @@
     "durability_flag": true,
     "governance_flag": true,
     "options": [
-      "Historical failure and performance data",
-      "Personal preference",
-      "Office design",
-      "Team seating arrangement"
+      "Escalate the evidence, document its impact, and require an accountable review before approval",
+      "Remove the failure records from the analysis",
+      "Approve the design without discussing the failures",
+      "Treat the failures as irrelevant"
     ],
     "correct_answer_index": 0
   },
@@ -289,7 +289,7 @@
   },
   {
     "question_id": "Q017",
-    "question_text": "Which method is most appropriate for evaluating whether an engineering control remains effective over time?",
+    "question_text": "Who should be responsible for confirming that an engineering control remains effective after deployment?",
     "question_type": "MCQ",
     "competency_criterion": "C5",
     "bloom_level": "Analyse",
@@ -298,10 +298,10 @@
     "durability_flag": true,
     "governance_flag": true,
     "options": [
-      "Monitor performance against defined criteria",
-      "Assume effectiveness without evidence",
-      "Stop reviewing the control",
-      "Ignore changes in operating conditions"
+      "A defined accountable owner should monitor evidence against approved criteria and trigger review when performance changes",
+      "No one, because the control was already approved",
+      "Only the original designer, without recorded evidence",
+      "The team should stop monitoring once deployment is complete"
     ],
     "correct_answer_index": 0
   },
@@ -356,6 +356,1086 @@
       "Approve the design because the technical target was met",
       "Ignore the operational risk",
       "Remove the risk from the assessment"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q021",
+    "question_text": "A laboratory team receives conflicting measurements from two instruments. What should the researcher do before drawing a conclusion?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare calibration records and assess the reliability of both data sources",
+      "Choose the measurement that supports the expected result",
+      "Discard the less convenient measurement",
+      "Average the values without checking their quality"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q022",
+    "question_text": "Which approach best helps a scientist identify a plausible source of variation in an experimental result?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Systematically examine variables, controls, and measurement conditions",
+      "Assume the variation is random without investigation",
+      "Change several variables at once",
+      "Ignore results that do not fit the hypothesis"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q023",
+    "question_text": "How should a researcher compare two competing explanations for an observed scientific result?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare how well each explanation accounts for the evidence and limitations",
+      "Select the explanation that is most familiar",
+      "Choose the explanation with the most complex terminology",
+      "Ignore evidence that challenges either explanation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q024",
+    "question_text": "A scientific dataset contains a small number of anomalous observations. What is the most appropriate first response?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Investigate whether the anomalies arise from measurement, sampling, or genuine variation",
+      "Remove the observations immediately",
+      "Replace them with expected values",
+      "Report only the observations that support the hypothesis"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q025",
+    "question_text": "Which governance practice best supports trustworthy scientific decision making?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assign accountability for the decision, preserve traceable evidence and assumptions, and require appropriate review",
+      "Report only the final conclusion",
+      "Avoid recording unexpected findings",
+      "Rely on an undocumented interpretation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q026",
+    "question_text": "What should a researcher consider before using an automated analytical output in a high-impact scientific decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Verify the output, understand its limitations, and define appropriate human oversight",
+      "Accept the output because it was generated automatically",
+      "Remove human review to improve speed",
+      "Use the output without recording its limitations"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q027",
+    "question_text": "Which evidence provides the strongest basis for evaluating whether an experimental method achieved its intended purpose?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Results compared with predefined objectives, controls, and uncertainty",
+      "A single favourable observation",
+      "An informal opinion from a colleague",
+      "The expectation that the method should work"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q028",
+    "question_text": "A researcher finds that a conclusion changes substantially when one assumption is altered. What does this indicate?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "The conclusion is sensitive to that assumption and should be reported with appropriate caution",
+      "The assumption should be hidden to simplify the report",
+      "The original conclusion is automatically correct",
+      "The sensitivity analysis is unnecessary"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q029",
+    "question_text": "Which action best demonstrates responsible handling of scientific evidence?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Preserve traceability from the reported conclusion to the underlying data and methods",
+      "Present only selected results",
+      "Remove inconvenient observations from the record",
+      "Avoid documenting analytical decisions"
+    ],
+    "correct_answer_index": 0,
+    "difficulty": "Hard"
+  },
+  {
+    "question_id": "Q030",
+    "question_text": "A scientific analysis produces a useful result but leaves a significant uncertainty unresolved. What should the researcher do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "State the uncertainty clearly and determine whether additional evidence is needed before relying on the result",
+      "Present the result as certain",
+      "Ignore the uncertainty because the result is useful",
+      "Remove the uncertainty from the report"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q031",
+    "question_text": "A business analyst is comparing two market-entry options. Which factor should be considered first when structuring the comparison?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Define consistent business objectives and decision criteria",
+      "Choose the option with the most attractive presentation",
+      "Select the option with the newest technology",
+      "Ignore differences in market conditions"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q032",
+    "question_text": "Which approach is most appropriate for identifying risks in a proposed commercial strategy?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Identify relevant risks, estimate their impact, and consider available controls",
+      "Focus only on the most visible risk",
+      "Assume risks will resolve themselves",
+      "Avoid documenting commercial assumptions"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q033",
+    "question_text": "How should a manager compare two suppliers when price, quality, reliability, and service all matter?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Use a consistent evaluation framework covering all relevant criteria",
+      "Choose the lowest quoted price automatically",
+      "Select the supplier with the strongest sales presentation",
+      "Compare suppliers using different criteria"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q034",
+    "question_text": "A sales forecast differs substantially from recent observed performance. What should an analyst do first?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Review the assumptions, data quality, and factors driving the forecast difference",
+      "Replace the forecast with the most recent value without analysis",
+      "Ignore the difference",
+      "Report only the forecast because it is already approved"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q035",
+    "question_text": "Which governance practice best supports a trustworthy commercial decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assign accountability and maintain traceable evidence, assumptions, approvals, and decision rationale",
+      "Keep decision criteria informal",
+      "Remove records after a decision is made",
+      "Rely only on verbal approvals"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q036",
+    "question_text": "Before using automated analysis to support a customer-impacting business decision, what is most important?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Verify the analysis, identify limitations, and establish appropriate human accountability",
+      "Accept the analysis without review",
+      "Remove human oversight to reduce cost",
+      "Use the output without documenting its basis"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q037",
+    "question_text": "Which evidence is most useful when evaluating whether a commercial strategy is achieving its intended objective?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant performance indicators compared with predefined objectives and assumptions",
+      "A single positive customer comment",
+      "An unverified market opinion",
+      "The original strategy document alone"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q038",
+    "question_text": "A commercial recommendation changes significantly when one demand assumption is adjusted. What should the analyst conclude?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "The recommendation is sensitive to the assumption and should include that limitation",
+      "The assumption should be hidden",
+      "The original recommendation is automatically valid",
+      "Sensitivity analysis should be omitted"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q039",
+    "question_text": "Which action best demonstrates responsible governance of a commercial decision supported by automated analysis?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Document the evidence, review responsibilities, limitations, and approval decision",
+      "Treat the automated output as the final authority",
+      "Avoid recording who approved the decision",
+      "Remove unfavorable evidence"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q040",
+    "question_text": "A business recommendation appears profitable but creates a material unresolved compliance risk. What should the decision maker do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess and address the compliance risk before approving the recommendation",
+      "Approve it because the projected profit is high",
+      "Ignore the risk until after implementation",
+      "Remove the risk from the decision record"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q041",
+    "question_text": "A curator is comparing two interpretations of a cultural work. Which approach provides the strongest basis for comparison?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare each interpretation against relevant evidence, context, and stated assumptions",
+      "Choose the interpretation that is most popular",
+      "Prefer the newest interpretation automatically",
+      "Ignore historical context"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q042",
+    "question_text": "Which approach best helps an arts researcher identify bias in a source?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Examine authorship, context, evidence selection, and the interests represented",
+      "Assume published sources are unbiased",
+      "Ignore the source's context",
+      "Use only the most recent source"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q043",
+    "question_text": "A museum team must choose between two exhibition narratives. How should they compare the options?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess each narrative against evidence, audience purpose, representation, and interpretive assumptions",
+      "Choose the narrative with the shortest text",
+      "Select the one with the most attractive design",
+      "Avoid documenting interpretive choices"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q044",
+    "question_text": "An arts researcher finds conflicting interpretations of the same historical work. What is the most appropriate response?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Trace the evidence and context supporting each interpretation before reaching a conclusion",
+      "Choose the interpretation that sounds most persuasive",
+      "Discard minority interpretations",
+      "Treat the conflict as irrelevant"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q045",
+    "question_text": "Which governance practice best supports trustworthy interpretation in a professional arts context?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assign review responsibility and document sources, interpretive assumptions, provenance, and reasons for key decisions",
+      "Rely on undocumented expert opinion",
+      "Remove conflicting evidence",
+      "Avoid recording provenance concerns"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q046",
+    "question_text": "Before using automated analysis to support a public-facing cultural interpretation, what should the curator do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Verify the output, assess limitations and bias, and retain human editorial accountability",
+      "Publish the output without review",
+      "Treat the automated result as authoritative",
+      "Remove uncertainty from the final interpretation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q047",
+    "question_text": "Which evidence should be prioritized when assessing whether an interpretation is adequately supported?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant primary or credible secondary evidence considered in its historical and cultural context",
+      "A single unsourced opinion",
+      "Popularity on social media",
+      "The researcher's personal preference"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q048",
+    "question_text": "An exhibition narrative changes substantially when one historical assumption is revised. What should the curator do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Reassess the narrative and disclose the dependence on that assumption",
+      "Hide the change to preserve consistency",
+      "Keep the original narrative without review",
+      "Remove the assumption from the record"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q049",
+    "question_text": "Which action best demonstrates responsible governance when presenting contested cultural material?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Document provenance, evidence, interpretive limits, and review responsibilities",
+      "Present one interpretation as unquestionable",
+      "Avoid recording contested evidence",
+      "Remove contextual information"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q050",
+    "question_text": "A public exhibition proposal is compelling but relies on a disputed provenance claim. What should the curator do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Resolve or clearly disclose the provenance uncertainty before making the claim publicly",
+      "Use the claim because it strengthens the exhibition",
+      "Ignore the provenance issue",
+      "Remove the provenance concern from the records"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q051",
+    "question_text": "Which approach provides the strongest basis for comparing two competing scientific explanations?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare both explanations against the same relevant evidence and assumptions",
+      "Select the explanation that is easiest to describe",
+      "Ignore evidence that challenges the preferred explanation",
+      "Choose the explanation proposed first"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q052",
+    "question_text": "A laboratory result differs substantially from the expected result. What should a scientist do first when analysing the discrepancy?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Examine the data, method, assumptions, and possible sources of error",
+      "Discard the result immediately",
+      "Change the conclusion to match the expectation",
+      "Ignore the discrepancy"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q053",
+    "question_text": "Which evidence is most useful when comparing the reliability of two scientific measurements?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant repeated measurements with documented methods and uncertainty",
+      "An unsupported personal judgement",
+      "A single undocumented observation",
+      "The result that appears most convenient"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q054",
+    "question_text": "Which practice best supports traceability of a scientific conclusion?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Record the evidence, methods, assumptions, and reasoning used to reach the conclusion",
+      "Keep the reasoning only as a verbal explanation",
+      "Remove unexpected observations from the record",
+      "Record only the final conclusion"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q055",
+    "question_text": "A research team discovers that an important assumption was not documented before an experiment was interpreted. What governance action is most appropriate?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Document the assumption, assess its impact, and require accountable review of the interpretation",
+      "Hide the assumption to preserve the original conclusion",
+      "Ignore the assumption because the experiment is complete",
+      "Delete the affected observations"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q056",
+    "question_text": "What should a scientist do when available evidence is insufficient to support a strong conclusion?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "State the uncertainty clearly and identify what additional evidence is needed",
+      "Present the conclusion as certain",
+      "Remove the uncertainty from the report",
+      "Choose the most favourable interpretation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q057",
+    "question_text": "How should a scientist analyse two experimental methods that produce different results?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare their assumptions, controls, measurement methods, and sources of uncertainty",
+      "Choose the method with the larger result",
+      "Ignore differences in experimental conditions",
+      "Use only the more recent method"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q058",
+    "question_text": "Which approach best supports analysis of uncertainty in an experimental result?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Identify relevant sources of uncertainty and assess their effect on the result",
+      "Assume all uncertainty is negligible",
+      "Remove uncertain observations",
+      "Report only the expected value"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q059",
+    "question_text": "A scientific conclusion depends on several datasets with different levels of reliability. What is the best analytical approach?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess the quality and limitations of each dataset before determining how much weight to give its evidence",
+      "Treat every dataset as equally reliable",
+      "Use only the dataset supporting the preferred conclusion",
+      "Ignore differences in collection methods"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q060",
+    "question_text": "A study has a statistically notable result but a serious limitation in its sampling method. What should the scientist conclude?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evaluate the sampling limitation and avoid drawing a stronger conclusion than the evidence supports",
+      "Treat the statistical result as sufficient by itself",
+      "Ignore the sampling limitation",
+      "Remove the limitation from the report"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q061",
+    "question_text": "Which approach provides the strongest basis for comparing two commercial proposals?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare both proposals against the same financial, operational, and strategic criteria",
+      "Choose the proposal with the most attractive presentation",
+      "Ignore implementation constraints",
+      "Select the proposal proposed first"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q062",
+    "question_text": "A business unit identifies a significant operational risk in a proposed initiative. What should it do first?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess the likelihood, impact, assumptions, and available controls",
+      "Ignore the risk until after launch",
+      "Remove the risk from the business case",
+      "Choose the lowest-cost option immediately"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q063",
+    "question_text": "Which evidence is most useful when evaluating whether a commercial initiative is meeting its objectives?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant performance measures compared with approved objectives and assumptions",
+      "Informal opinions only",
+      "Unverified forecasts only",
+      "The most favourable customer comment"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q064",
+    "question_text": "Which practice best supports traceability of a commercial decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Document the evidence, assumptions, criteria, approvals, and decision rationale",
+      "Keep the decision rationale informal",
+      "Record only the final choice",
+      "Remove evidence after approval"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q065",
+    "question_text": "A commercial proposal has strong projected returns but lacks a clearly assigned approval owner. What governance action is most appropriate?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Define accountability, approval authority, evidence requirements, and review responsibilities before approval",
+      "Approve it because the projected return is high",
+      "Leave accountability informal",
+      "Remove the governance requirement"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q066",
+    "question_text": "What should a business analyst do when available commercial evidence does not justify a firm recommendation?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "State the evidence limitation and identify the additional information needed for the decision",
+      "Present an uncertain recommendation as certain",
+      "Ignore missing information",
+      "Select the option with the strongest marketing claim"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q067",
+    "question_text": "How should an analyst compare two investment options with different risk profiles?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare expected outcomes, assumptions, risks, constraints, and decision criteria consistently",
+      "Compare only the highest projected return",
+      "Ignore risk differences",
+      "Choose the option with the shortest description"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q068",
+    "question_text": "Which approach best supports analysis of a supply-chain disruption risk?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Identify dependencies, estimate potential impacts, and evaluate feasible controls and alternatives",
+      "Assume disruption is impossible",
+      "Ignore supplier dependencies",
+      "Use only the lowest-cost supplier"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q069",
+    "question_text": "A commercial forecast relies heavily on an assumption that has recently changed. What should the analyst do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Reassess the forecast using the changed assumption and determine how sensitive the decision is to it",
+      "Keep the original forecast unchanged",
+      "Remove the changed assumption from the analysis",
+      "Use the most favourable forecast"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q070",
+    "question_text": "A proposed business decision has attractive financial results but significant compliance and operational uncertainties. What is the most appropriate analysis?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evaluate financial, compliance, operational, and governance evidence together before recommending approval",
+      "Approve based only on financial results",
+      "Ignore compliance uncertainty",
+      "Remove operational risks from the assessment"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q071",
+    "question_text": "Which approach provides the strongest basis for comparing two interpretations of a creative work?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare both interpretations against the available work, context, sources, and stated interpretive assumptions",
+      "Choose the interpretation that is most popular",
+      "Ignore the historical context",
+      "Select the first interpretation proposed"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q072",
+    "question_text": "An arts researcher finds conflicting evidence about the provenance of a work. What should the researcher do first?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Examine the reliability, provenance, and limitations of the conflicting evidence",
+      "Choose the source that supports the preferred attribution",
+      "Ignore the conflict",
+      "Remove the conflicting records"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q073",
+    "question_text": "Which evidence is most useful when evaluating an interpretation of a creative work?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant primary or contextual evidence with its provenance and limitations documented",
+      "An unsupported personal preference",
+      "An anonymous claim without context",
+      "Only the most recent opinion"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q074",
+    "question_text": "Which practice best supports traceability in arts research?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Record sources, provenance, interpretive assumptions, and the reasoning behind important conclusions",
+      "Keep sources undocumented",
+      "Record only the final interpretation",
+      "Remove evidence that conflicts with the conclusion"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q075",
+    "question_text": "A cultural programme uses historical material with uncertain provenance. What governance action is most appropriate before public presentation?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assign review responsibility, document provenance concerns, and establish accountable approval criteria",
+      "Present the material without recording the uncertainty",
+      "Remove provenance information",
+      "Assume the material is authentic without review"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q076",
+    "question_text": "What should an arts professional do when the available evidence supports several plausible interpretations?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Explain the alternatives and the evidence supporting each while acknowledging uncertainty",
+      "Present one interpretation as proven fact",
+      "Ignore competing interpretations",
+      "Choose the most popular interpretation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q077",
+    "question_text": "How should an arts researcher compare two competing attribution hypotheses?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare each hypothesis against provenance, stylistic, contextual, and documentary evidence",
+      "Use only stylistic preference",
+      "Choose the hypothesis with the strongest publicity",
+      "Ignore documentary evidence"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q078",
+    "question_text": "Which approach best supports analysis of uncertainty in a cultural research claim?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Identify evidence gaps, competing explanations, and the effect of uncertainty on the claim",
+      "Hide conflicting evidence",
+      "Assume missing evidence supports the claim",
+      "Treat all sources as equally reliable"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q079",
+    "question_text": "A researcher must interpret a work using sources with different levels of reliability and provenance. What is the best analytical approach?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess source quality and provenance before determining how much weight each source should receive",
+      "Treat all sources as equally reliable",
+      "Use only sources supporting the preferred interpretation",
+      "Ignore provenance differences"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q080",
+    "question_text": "An exhibition interpretation is based on an uncertain attribution that could materially change the audience's understanding of the work. What should the curator do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Review the attribution evidence, document the uncertainty, and ensure the public interpretation does not overstate what is known",
+      "Present the attribution as certain",
+      "Remove the uncertainty from public documentation",
+      "Ignore the attribution issue"
     ],
     "correct_answer_index": 0
   }

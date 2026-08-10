@@ -1,50 +1,242 @@
 [
-    {
-        "scenario_id": "SC001",
-        "title": "Engineering Design Challenge",
-        "description": "Design and evaluate an engineering solution for a practical problem.",
-        "domain": "Engineering",
-        "difficulty": "Medium",
-        "criteria": [
-            "C1",
-            "C2",
-            "C3"
-        ]
-    },
-    {
-        "scenario_id": "SC002",
-        "title": "Engineering Risk Analysis",
-        "description": "Analyse an engineering project and identify technical and operational risks.",
-        "domain": "Engineering",
-        "difficulty": "Hard",
-        "criteria": [
-            "C2",
-            "C4",
-            "C5"
-        ]
-    },
-    {
-        "scenario_id": "SC003",
-        "title": "Science Investigation",
-        "description": "Investigate a scientific problem and evaluate possible conclusions.",
-        "domain": "Science",
-        "difficulty": "Medium",
-        "criteria": [
-            "C1",
-            "C3",
-            "C6"
-        ]
-    },
-    {
-        "scenario_id": "SC004",
-        "title": "Commerce Strategy",
-        "description": "Develop a strategy for solving a business and commerce problem.",
-        "domain": "Commerce",
-        "difficulty": "Hard",
-        "criteria": [
-            "C2",
-            "C4",
-            "C6"
-        ]
-    }
+  {
+    "scenario_id": "SC001",
+    "title": "Engineering Design Challenge",
+    "description": "A design engineer at a product company is evaluating a new mechanical subsystem against performance requirements and operating constraints. The engineer must compare evidence, identify risks, and justify the design decision before approval.",
+    "domain": "Engineering",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "scenario_id": "SC002",
+    "title": "Engineering Risk Analysis",
+    "description": "A systems engineer at an infrastructure company is reviewing a proposed control system after several operational incidents. The engineer must analyse technical risks, evaluate evidence, and determine which controls and responsibilities are required before deployment.",
+    "domain": "Engineering",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C4",
+      "C5"
+    ]
+  },
+  {
+    "scenario_id": "SC003",
+    "title": "Science Investigation",
+    "description": "A research scientist at an environmental laboratory is investigating an unexpected result in a controlled experiment. The scientist must compare evidence, assess uncertainty, and decide whether the available data supports the proposed conclusion.",
+    "domain": "Science",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C3",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC004",
+    "title": "Commerce Strategy",
+    "description": "A strategy analyst at a mid-sized retail company is comparing two market-entry proposals. The analyst must evaluate commercial evidence, operational risks, and governance responsibilities before recommending an option.",
+    "domain": "Commerce",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C4",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC005",
+    "title": "Engineering Reliability Review",
+    "description": "A reliability engineer at a manufacturing plant is reviewing repeated equipment failures before approving a maintenance redesign. The engineer must compare evidence, operational risks, and responsible control measures.",
+    "domain": "Engineering",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C2",
+      "C5"
+    ]
+  },
+  {
+    "scenario_id": "SC006",
+    "title": "Engineering Safety Verification",
+    "description": "A systems engineer at an infrastructure firm is reviewing a proposed control system before deployment. The engineer must verify performance evidence and determine whether unresolved safety risks require additional controls.",
+    "domain": "Engineering",
+    "difficulty": "Hard",
+    "criteria": [
+      "C3",
+      "C4",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC007",
+    "title": "Engineering Requirements Review",
+    "description": "A design engineer at a product company is evaluating competing prototypes against technical requirements and operating constraints. The engineer must document the evidence and justify the selected design.",
+    "domain": "Engineering",
+    "difficulty": "Easy",
+    "criteria": [
+      "C1",
+      "C3",
+      "C4"
+    ]
+  },
+  {
+    "scenario_id": "SC008",
+    "title": "Science Experimental Review",
+    "description": "A research scientist at an environmental laboratory is reviewing an experiment with inconsistent measurements. The scientist must assess data quality, uncertainty, and whether the evidence supports the proposed conclusion.",
+    "domain": "Science",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "scenario_id": "SC009",
+    "title": "Science Evidence Assessment",
+    "description": "A laboratory research lead is evaluating competing explanations for an unexpected experimental result. The lead must compare evidence, assumptions, uncertainty, and the implications of each interpretation.",
+    "domain": "Science",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C3",
+      "C5"
+    ]
+  },
+  {
+    "scenario_id": "SC010",
+    "title": "Science Data Governance",
+    "description": "A scientific data manager at a research institution is reviewing an analytical workflow before its results are used in a high-impact study. The manager must ensure traceability, appropriate review, and clear accountability for automated analysis.",
+    "domain": "Science",
+    "difficulty": "Medium",
+    "criteria": [
+      "C4",
+      "C5",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC011",
+    "title": "Science Method Validation",
+    "description": "A laboratory method specialist is deciding whether a new analytical procedure is sufficiently validated for routine use. The specialist must compare performance evidence, limitations, and verification requirements.",
+    "domain": "Science",
+    "difficulty": "Easy",
+    "criteria": [
+      "C1",
+      "C4",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC012",
+    "title": "Commerce Market Entry",
+    "description": "A strategy analyst at a mid-sized retail company is comparing two market-entry proposals. The analyst must evaluate assumptions, commercial risks, evidence, and governance requirements before recommending an option.",
+    "domain": "Commerce",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C2",
+      "C4"
+    ]
+  },
+  {
+    "scenario_id": "SC013",
+    "title": "Commerce Supplier Decision",
+    "description": "A procurement manager at a regional business is evaluating competing suppliers for a critical service. The manager must compare cost, quality, reliability, operational risk, and accountability before approval.",
+    "domain": "Commerce",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C3",
+      "C5"
+    ]
+  },
+  {
+    "scenario_id": "SC014",
+    "title": "Commerce Forecast Review",
+    "description": "A business planning analyst is reviewing a sales forecast that differs substantially from recent performance. The analyst must investigate assumptions, evidence quality, uncertainty, and decision consequences.",
+    "domain": "Commerce",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C3",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC015",
+    "title": "Commerce Customer Decision Governance",
+    "description": "A customer operations manager is reviewing an automated recommendation process that influences customer-facing decisions. The manager must establish verification, accountability, documentation, and escalation controls.",
+    "domain": "Commerce",
+    "difficulty": "Hard",
+    "criteria": [
+      "C4",
+      "C5",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC016",
+    "title": "Arts Exhibition Curation",
+    "description": "A museum curator is developing an exhibition narrative from multiple historical sources with differing interpretations. The curator must evaluate evidence, context, representation, and the assumptions behind the proposed narrative.",
+    "domain": "Arts",
+    "difficulty": "Medium",
+    "criteria": [
+      "C1",
+      "C3",
+      "C4"
+    ]
+  },
+  {
+    "scenario_id": "SC017",
+    "title": "Arts Provenance Review",
+    "description": "A collections specialist at a museum is reviewing the provenance of an artwork before public display. The specialist must assess evidence quality, unresolved uncertainty, and the responsibilities associated with public claims.",
+    "domain": "Arts",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C5",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC018",
+    "title": "Arts Cultural Interpretation",
+    "description": "A cultural researcher is comparing interpretations of a historical work for an educational programme. The researcher must distinguish evidence from assumption and decide how uncertainty should be communicated.",
+    "domain": "Arts",
+    "difficulty": "Easy",
+    "criteria": [
+      "C1",
+      "C2",
+      "C3"
+    ]
+  },
+  {
+    "scenario_id": "SC019",
+    "title": "Arts Public Narrative Review",
+    "description": "A museum education lead is reviewing an automated draft of a public exhibition description. The lead must verify factual claims, identify limitations, and retain human editorial responsibility before publication.",
+    "domain": "Arts",
+    "difficulty": "Medium",
+    "criteria": [
+      "C4",
+      "C5",
+      "C6"
+    ]
+  },
+  {
+    "scenario_id": "SC020",
+    "title": "Arts Contested Material Decision",
+    "description": "A senior curator is deciding whether to include contested cultural material in a public exhibition. The curator must evaluate provenance, evidence, interpretive risk, and responsible communication before approval.",
+    "domain": "Arts",
+    "difficulty": "Hard",
+    "criteria": [
+      "C2",
+      "C4",
+      "C5"
+    ]
+  }
 ]
