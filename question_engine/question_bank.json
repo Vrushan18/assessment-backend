@@ -1,0 +1,362 @@
+[
+  {
+    "question_id": "Q001",
+    "question_text": "Which factor should be considered first when evaluating an engineering design?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Project requirements",
+      "Personal preference",
+      "Office location",
+      "Team size"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q002",
+    "question_text": "Which approach is most appropriate for identifying technical risks in an engineering project?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Ignore previous failures",
+      "Systematically analyse possible failure conditions",
+      "Select the cheapest option immediately",
+      "Avoid documenting risks"
+    ],
+    "correct_answer_index": 1
+  },
+  {
+    "question_id": "Q003",
+    "question_text": "How should an engineer compare two proposed solutions?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Use predefined technical and performance criteria",
+      "Choose the newest solution",
+      "Choose randomly",
+      "Ignore project constraints"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q004",
+    "question_text": "Which activity best supports engineering decision making?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evidence-based comparison",
+      "Guessing",
+      "Ignoring constraints",
+      "Avoiding documentation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q005",
+    "question_text": "Which factor is important when evaluating the long-term reliability of an engineering solution?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Reliability evidence",
+      "Colour of the equipment",
+      "Office layout",
+      "Personal preference"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q006",
+    "question_text": "Which consideration is most important when implementing an engineering solution responsibly?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Applicable standards and responsibilities",
+      "Ignoring regulations",
+      "Avoiding review",
+      "Using undocumented assumptions"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q007",
+    "question_text": "Which method can be used to evaluate whether an engineering solution meets its intended requirements?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare measured performance with requirements",
+      "Ignore test results",
+      "Use personal opinion",
+      "Skip validation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q008",
+    "question_text": "Which approach best supports analysis of operational risk?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Identify hazards and evaluate their potential impact",
+      "Ignore low-probability risks",
+      "Avoid recording assumptions",
+      "Select an option without analysis"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q009",
+    "question_text": "Which evidence is most useful when evaluating a proposed engineering solution?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant test and performance evidence",
+      "Unverified opinions",
+      "Random selection",
+      "Unrecorded assumptions"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q010",
+    "question_text": "Which action demonstrates responsible engineering governance?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Follow applicable standards and maintain appropriate records",
+      "Ignore standards",
+      "Avoid reviews",
+      "Hide project risks"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q011",
+    "question_text": "Which source of information is most useful when identifying possible failure modes in an engineering system?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Historical failure and performance data",
+      "Personal preference",
+      "Office design",
+      "Team seating arrangement"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q012",
+    "question_text": "What should an engineer do when available evidence does not support a proposed design decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Seek additional evidence before finalising the decision",
+      "Ignore the missing evidence",
+      "Choose an option randomly",
+      "Remove the requirement"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q013",
+    "question_text": "Which approach provides the strongest basis for comparing engineering alternatives?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Easy",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Use consistent technical criteria for all alternatives",
+      "Evaluate only the preferred alternative",
+      "Ignore measurable requirements",
+      "Select the first available option"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q014",
+    "question_text": "How can an engineering team determine whether a technical risk requires additional control measures?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evaluate the likelihood and potential impact of the risk",
+      "Ignore the risk if it has occurred before",
+      "Use personal preference",
+      "Avoid documenting the risk"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q015",
+    "question_text": "Which evidence should be considered when evaluating the performance of an engineering design?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant test results and performance measurements",
+      "Unverified assumptions",
+      "Personal opinions",
+      "Unrecorded observations"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q016",
+    "question_text": "Which practice best supports traceability of an engineering decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Document the evidence, assumptions, and decision rationale",
+      "Keep the reasoning undocumented",
+      "Use only verbal instructions",
+      "Remove supporting evidence"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q017",
+    "question_text": "Which method is most appropriate for evaluating whether an engineering control remains effective over time?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Monitor performance against defined criteria",
+      "Assume effectiveness without evidence",
+      "Stop reviewing the control",
+      "Ignore changes in operating conditions"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q018",
+    "question_text": "Which action best demonstrates consideration of professional responsibility in an engineering decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Consider applicable standards, responsibilities, and potential impacts",
+      "Ignore applicable requirements",
+      "Hide known risks",
+      "Avoid independent review"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q019",
+    "question_text": "Which approach is most effective when evaluating competing engineering solutions under multiple constraints?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare alternatives systematically against technical, operational, and risk criteria",
+      "Consider only the lowest initial cost",
+      "Ignore operational constraints",
+      "Select the solution without comparison"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q020",
+    "question_text": "An engineering design meets its technical target but introduces a significant unaddressed operational risk. What should the engineer do?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evaluate and address the operational risk before approving the design",
+      "Approve the design because the technical target was met",
+      "Ignore the operational risk",
+      "Remove the risk from the assessment"
+    ],
+    "correct_answer_index": 0
+  }
+]

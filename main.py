@@ -5,6 +5,9 @@ from context_processor.schemas import CandidateContextObject
 from context_processor.validator import parse_dq_output, validate_context
 
 from mapping_engine.mapper import ContextMapper
+from scenario_engine.selector import select_scenario
+from question_engine.selector import select_questions
+from assessment_package.assembler import assemble_package
 
 
 app = FastAPI(
@@ -94,3 +97,57 @@ async def map_context(context: CandidateContextObject):
     mapped_context = mapper.map(context)
 
     return mapped_context.model_dump(mode="json")
+@app.post("/questions/select")
+async def select_questions_endpoint(
+    context: CandidateContextObject
+):
+    """
+    Step 3/4 of the PECS assessment pipeline.
+
+    Receives a validated CandidateContextObject.
+
+    Pipeline:
+    CandidateContext
+        ↓
+    MappedContext
+        ↓
+    Scenario
+        ↓
+    Selected Questions
+        ↓
+    AssessmentPackage
+    """
+
+    # ---------------------------------------------------------
+    # Step 1: Map candidate context
+    # ---------------------------------------------------------
+
+    mapper = ContextMapper()
+    mapped_context = mapper.map(context)
+
+    # ---------------------------------------------------------
+    # Step 2: Select scenario
+    # ---------------------------------------------------------
+
+    scenario = select_scenario(mapped_context)
+
+    # ---------------------------------------------------------
+    # Step 3: Select questions
+    # ---------------------------------------------------------
+
+    questions = select_questions(
+        mapped_context,
+        scenario
+    )
+
+    # ---------------------------------------------------------
+    # Step 4: Assemble final assessment package
+    # ---------------------------------------------------------
+
+    package = assemble_package(
+        candidate_context=context,
+        scenario=scenario,
+        questions=questions
+    )
+
+    return package.model_dump(mode="json")
