@@ -1438,5 +1438,365 @@
       "Ignore the attribution issue"
     ],
     "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q081",
+    "question_text": "How should an engineer prioritize design constraints when several requirements conflict?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Use documented safety and performance priorities",
+      "Choose the least expensive requirement",
+      "Ignore non-technical constraints",
+      "Select the newest component"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q082",
+    "question_text": "Which approach best reduces uncertainty when assessing a new engineering process?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Rely on assumptions",
+      "Use evidence from tests and documented risks",
+      "Skip validation to save time",
+      "Copy an unrelated process"
+    ],
+    "correct_answer_index": 1
+  },
+  {
+    "question_id": "Q083",
+    "question_text": "How should two engineering alternatives be evaluated before implementation?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare them against agreed technical, risk, and lifecycle criteria",
+      "Choose the option with the most features",
+      "Choose based on personal preference",
+      "Avoid comparing long-term effects"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q084",
+    "question_text": "Which evidence most strongly supports an engineering design decision?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Evaluate",
+    "difficulty": "Hard",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Traceable test and analysis results",
+      "An informal opinion",
+      "A marketing slogan",
+      "An undocumented estimate"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q085",
+    "question_text": "Which factor is most useful when assessing whether an engineering solution will remain effective over time?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Engineering",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Maintainability and reliability evidence",
+      "Office decoration",
+      "Team seating arrangement",
+      "Brand popularity"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q086",
+    "question_text": "Which practice best supports responsible implementation of a scientific finding?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Consider evidence, limitations, risks, and appropriate use",
+      "Ignore limitations",
+      "Use the result without validation",
+      "Rely only on public opinion"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q087",
+    "question_text": "How should a scientist judge whether an experimental conclusion is well supported?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare the conclusion with the collected evidence and controls",
+      "Accept it because it is expected",
+      "Ignore contradictory observations",
+      "Use only the largest value"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q088",
+    "question_text": "Which method best helps identify uncertainty in an experimental result?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess measurement error and sources of variability",
+      "Remove unexpected results without review",
+      "Assume every measurement is exact",
+      "Ignore the experimental method"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q089",
+    "question_text": "How should competing scientific explanations be compared?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Evaluate",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare their predictions with reproducible evidence",
+      "Choose the explanation with the simplest name",
+      "Select the most popular explanation",
+      "Avoid testing either explanation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q090",
+    "question_text": "Which evidence is strongest when evaluating a scientific claim?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Science",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Reproducible results from a controlled method",
+      "An unsupported anecdote",
+      "An advertising statement",
+      "A single unverified comment"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q091",
+    "question_text": "Which measure is most useful when assessing the long-term financial health of a business?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Sustainable cash flow and profitability trends",
+      "Office size",
+      "Number of advertisements alone",
+      "Personal preference"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q092",
+    "question_text": "Which consideration is most important when implementing a financial decision responsibly?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compliance, risk, evidence, and stakeholder impact",
+      "Speed alone",
+      "Ignoring documented controls",
+      "Choosing the most popular option"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q093",
+    "question_text": "How should a business compare two investment alternatives?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Evaluate expected return, risk, cost, and strategic fit",
+      "Choose the larger headline return",
+      "Choose randomly",
+      "Ignore implementation costs"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q094",
+    "question_text": "Which approach best identifies operational risk in a business process?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Map the process and assess likely failure points and controls",
+      "Ignore exceptions",
+      "Focus only on revenue",
+      "Remove all documentation"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q095",
+    "question_text": "How should management evaluate a proposed pricing change?",
+    "question_type": "MCQ",
+    "competency_criterion": "C3",
+    "bloom_level": "Evaluate",
+    "difficulty": "Hard",
+    "domain": "Commerce",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Assess demand, costs, competition, margins, and customer impact",
+      "Change price without evidence",
+      "Copy a competitor exactly",
+      "Ignore customer response"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q096",
+    "question_text": "Which evidence best supports an interpretation of an artwork?",
+    "question_type": "MCQ",
+    "competency_criterion": "C4",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Relevant visual, historical, and contextual evidence",
+      "Personal preference alone",
+      "Popularity on social media",
+      "The artwork's price alone"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q097",
+    "question_text": "How should an arts organization assess whether a program is sustainable?",
+    "question_type": "MCQ",
+    "competency_criterion": "C5",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Consider audience value, resources, costs, and long-term feasibility",
+      "Focus only on opening attendance",
+      "Ignore resource limits",
+      "Use popularity as the only measure"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q098",
+    "question_text": "Which practice best supports responsible presentation of cultural material?",
+    "question_type": "MCQ",
+    "competency_criterion": "C6",
+    "bloom_level": "Analyse",
+    "difficulty": "Medium",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Use accurate context, appropriate attribution, and respectful representation",
+      "Remove historical context",
+      "Use unverified claims",
+      "Treat all cultural material as interchangeable"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q099",
+    "question_text": "How should two artistic approaches be compared for a project?",
+    "question_type": "MCQ",
+    "competency_criterion": "C1",
+    "bloom_level": "Evaluate",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Compare them against the project's purpose, audience, context, and constraints",
+      "Choose the most expensive approach",
+      "Choose based only on personal taste",
+      "Ignore the intended audience"
+    ],
+    "correct_answer_index": 0
+  },
+  {
+    "question_id": "Q100",
+    "question_text": "Which method best supports a defensible arts research conclusion?",
+    "question_type": "MCQ",
+    "competency_criterion": "C2",
+    "bloom_level": "Analyse",
+    "difficulty": "Hard",
+    "domain": "Arts",
+    "durability_flag": true,
+    "governance_flag": true,
+    "options": [
+      "Triangulate primary evidence with credible contextual sources",
+      "Use a single unsupported opinion",
+      "Ignore contradictory sources",
+      "Rely only on popularity"
+    ],
+    "correct_answer_index": 0
   }
 ]
