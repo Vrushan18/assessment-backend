@@ -1,3 +1,12 @@
+from typing import List
+
+from pydantic import BaseModel
+
+from assessment_package.schemas import AssessmentPackage
+from evaluation_engine.grading import CandidateResponse
+from evaluation_engine.grader import PECSGrader
+from evaluation_engine.evaluator import grade_assessment
+from evaluation_engine.rag_setup import get_rubric_collection
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, RedirectResponse
 
@@ -8,6 +17,50 @@ from mapping_engine.mapper import ContextMapper
 from scenario_engine.selector import select_scenario
 from question_engine.selector import select_questions
 from assessment_package.assembler import assemble_package
+class EvaluationGradeRequest(BaseModel):
+    package: AssessmentPackage
+    candidate_responses: List[CandidateResponse]
+
+def retrieve_rubrics_for_question(
+    question,
+    candidate_context,
+):
+    collection = get_rubric_collection()
+
+    results = collection.get(
+        where={
+            "$and": [
+                {
+                    "criterion":
+                    question.competency_criterion.value
+                },
+                {
+                    "level":
+                    candidate_context.certification_level.value
+                },
+                {
+                    "domain":
+                    candidate_context.domain.value
+                },
+            ]
+        },
+        limit=5,
+    )
+
+    rubric_records = []
+
+    ids = results.get("ids", [])
+    documents = results.get("documents", [])
+
+    for rubric_id, document in zip(ids, documents):
+        rubric_records.append(
+            {
+                "id": rubric_id,
+                "document": document,
+            }
+        )
+
+    return rubric_records
 
 
 app = FastAPI(
@@ -151,3 +204,28 @@ async def select_questions_endpoint(
     )
 
     return package.model_dump(mode="json")
+@app.post("/evaluation/grade")
+async def grade_evaluation(
+    request: EvaluationGradeRequest
+):
+    """
+    Evaluation Engine endpoint.
+
+    Receives:
+    - AssessmentPackage
+    - Candidate responses
+
+    Returns:
+    - ScoredResult
+    """
+
+    grader = PECSGrader()
+
+    result = grade_assessment(
+        package=request.package,
+        candidate_responses=request.candidate_responses,
+        rubric_retriever=retrieve_rubrics_for_question,
+        grader=grader,
+    )
+
+    return result.model_dump(mode="json")
